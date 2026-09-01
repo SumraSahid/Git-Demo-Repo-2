@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red
+        {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation: red 2s infinite;
+            margin-bottom: 10px;
+        }
+        .container
+        {
+            border: 1px dotted gray;
+            position: absolute;
+            height: 500px;
+            width: 1000px;
+        }
+        .rotate
+        {
+            position: relative;
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            animation: move 4s ease-in-out alternate 2s infinite forwards;
+            
+        }
+        @keyframes red 
+        {
+            from
+            {
+                background-color: red;
+            }    
+            to
+            {
+                background-color: rgb(153, 255, 0);
+            }
+        }
+        @keyframes move
+        {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+            }
+            25%
+            {
+                top: 0px;
+                left: 900px;
+                background-color: blue;
+            }
+            50%
+            {
+                top: 400px;
+                left: 900px;
+                background-color: chartreuse;
+            }
+            75%
+            {
+                top: 400px;
+                left: 0px;
+                background-color:sienna ;
+            }
+            100%
+            {
+                top: 0px;
+                left: 0px;
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="container">
+    <div class="rotate"></div>
+    </div>
+</body>
+</html>
